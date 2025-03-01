@@ -1,0 +1,22 @@
+/*Custom Styles */ 
+/* 修改 Livere 评论框的背景颜色 */
+#lv-container {
+    background-color: #f8f8f8 !important; /* 改成浅灰色 */
+}
+
+/* 修改评论内容的背景色 */
+.livere-comment {
+    background-color: #ffffff !important; /* 纯白 */
+    color: #333 !important; /* 深灰色字体 */
+}
+
+/* 修改按钮颜色 */
+.livere-btn {
+    background-color: #85afd4 !important; /* 绿色背景 */
+    color: #fff !important; /* 按钮文字改白色 */
+}
+
+/* 修改用户名颜色 */
+.livere-comment .livere-user {
+    color: #ff9800 !important; /* 橙色用户名 */
+}
