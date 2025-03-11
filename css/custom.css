@@ -21,9 +21,3 @@
     color: #ff9800 !important; /* 橙色用户名 */
 }
 
-.post-cover {
-    background-image: url('/images/handsome.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 400px;  /* 设置封面的高度 */
-}
