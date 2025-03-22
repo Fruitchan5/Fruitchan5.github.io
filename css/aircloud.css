@@ -117,18 +117,22 @@ body {
   border-bottom: 1px solid #979797;
 }
 .nav .avatar-name .avatar {
-  width: 240px;
-  height: 120px;
+  width: 200px;
+  height: 160px;  /* 让整体容器大一点 */
   padding: 10px;
   box-sizing: border-box;
 }
+
 .nav .avatar-name .avatar img {
-  width: 100px;
-  height: 80px;
+  width:200px;
+  height: 160px; /* 让头像和容器一样大 */
+  object-fit: cover; /* 防止头像被拉伸或变形 */
 }
+
 .nav .avatar-name .radius img {
-  border-radius: 50%;
+  border-radius: 50%; /* 确保头像是圆形 */
 }
+
 .nav .avatar-name .name {
   margin-top: 10px;
   margin-bottom: 20px;
