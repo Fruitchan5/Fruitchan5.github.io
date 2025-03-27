@@ -21,3 +21,10 @@
     color: #ff9800 !important; /* 橙色用户名 */
 }
 
+#lv-container {
+    content: "欢迎留言，可以不保持友善 😊 :face_with_peeking_eye: :melting_face:";
+    max-width: 800px; /* 设置最大宽度 */
+    margin-left: auto; /* 左侧留白 */
+    margin-right: 0; /* 靠右对齐 */
+    padding-left: 50px; /* 适当调整 */
+}
