@@ -28,3 +28,6 @@
     margin-right: 0; /* 靠右对齐 */
     padding-left: 50px; /* 适当调整 */
 }
+.avatar img {
+    content: url('/images/avatar.gif');
+}
