@@ -38,6 +38,36 @@
 
 
 
+
+
+<!-- APlayer 样式和脚本 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+
+<!-- 背景音乐播放器 -->
+<div id="aplayer"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const ap = new APlayer({
+        container: document.getElementById('aplayer'),
+        autoplay: true, // 自动播放
+        loop: 'all',    // 循环播放
+        order: 'random', // 随机播放
+        volume: 0.5,    // 默认音量
+        audio: [
+            {
+                name: '为什么',
+                artist: '五月天',
+                url: '/music/song1.mp3', // 本地音乐
+                cover: '/images/handsome.jpg'
+            }
+        ]
+    });
+});
+</script>
+
+
 <meta name="generator" content="Hexo 7.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 </head>
@@ -157,7 +187,7 @@
     </div>
     <div class="post-content ">
         <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="fa02338e7e91cb3d2641bb2fa2dcfa7049a07c596a2ba3ce09d7302e59c424c2">1a44779ea610f3379778dfc8d936558c0c6472cb3908633d70886650aa68f79076fd87e71f5e5743dbb3502321670589c9e1c165d137b8a25f51925dd3b012e5ac12251bb8b73df2d25d82ee708cdd8d4a18006618ae4759b4cbcebc72bfdb9735ea0b6f64771563d69b18dec5ae5a43dccae52a3222e32bd13d848f292f1ce1fe9566d2b66f1659e6fe23613edc9876ecf51d2f5aa975cfc233b98e1271436d307c5b5d88cb2dc7e705ec5d06aa4937cf5eb7b77954ba2a100f3f7b193fd94df4c6f7cd61db80de180112b449ef1d1b3566172f135335eb3fae4b9c8d654c3a8dc9a144460fe0eebb009c91dc159929e7cf0ab90d24419b73334f5d0c5f5d51e312a9e832640e0c19803c41bb04cfb574446deb33c3eb9d4e14a5bfd1761012a646bd4a6567e7dcb782fcad2ca0a38b24f45fd31b4767b7a675699156e6b4e9</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="40a1ccbfc08549541c557cfde7339574eb8fbef92ce65e205f1ae85571c46ac4">1a44779ea610f3379778dfc8d936558c13a7b365c6e0c8ddb547131649f06e2eea5af666868eeb45a1fc1c965b7aaad43dcbab1d6f5f8c5f07ef873d4f03911c7214263671089df841756503edd722fd35f856b9def14918dc08473b89b53080d238d30fdc26ed6e7d629878f2f77f02e9efe474d686c60e83a52a573d46c62bb414efecfb6dd380b2b2375b03c34599fbaa8226ce08b4f9df611f6030a051bca9c300cf4d62cccad8bd2dda0f6150c56a76ef193b57e1fba7dbe4b19a8ea8c963b815239c9abf1dc6fab8ce623e094ac39f201d929bf3dc91e849979b2f7da569ebe25820b65d3a6ac335dfd0659911a1a316c8e320b84266b8b6196714766ffdf5e8e2d6bb80514bf44bee0e526119e87349924175347de3fb4bc13cf964f2678b7a0a5d0904d926a305987fe103ab4b39a6dcaa8428de498dc5f9323fab2f61c95c73f056a7db7b55e844fc14c5726c5a0b9f57357fd0d251193f85a7669d5a432941a626ead905ecf274174223563cb34c422eb371226f11bf47eee9d38a6283a6cbc08e2f14b7ed307330d04699631fad921e5f67fab76a732d180edb33b17520223698e7457f544a2d40a501b730957cd240f591063e7313205001f379fdbe6cd673848168c7c48d333b61fc97294113c9256014abf653b321cb5ff15f8b8a6957dccb4fd11a8088a15df396f99abca0015fe216392b0d7e484dac36eaa80c6b2765d7ea156899143223452bc70bb7e9a55f27143bfb9718e894506c31</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-xray">
       <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
