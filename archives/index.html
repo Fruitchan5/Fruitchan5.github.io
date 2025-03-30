@@ -51,16 +51,19 @@
 document.addEventListener('DOMContentLoaded', function () {
     const ap = new APlayer({
         container: document.getElementById('aplayer'),
+        fixed: true,
         autoplay: true, // 自动播放
         loop: 'all',    // 循环播放
-        order: 'random', // 随机播放
+        order: 'list',
+        lrcType: 3,  // 支持滚动歌词
         volume: 0.5,    // 默认音量
         audio: [
             {
                 name: '为什么',
                 artist: '五月天',
-                url: '/music/song1.mp3', // 本地音乐
-                cover: '/images/handsome.jpg'
+                url: '/music/why.mp3', // 本地音乐
+                cover: '/images/handsome.jpg', // 封面图片
+                lrc: '/music/为什么（今日的爱情）-五月天-歌词.lrc' // 歌词文件
             }
         ]
     });
@@ -326,6 +329,8 @@ document.addEventListener('DOMContentLoaded', function () {
         </span>
         Created By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>  Theme <a target="_blank" rel="noopener" href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
 </footer>
+
+
 
 
 <!-- 来必力City版安装代码 -->
