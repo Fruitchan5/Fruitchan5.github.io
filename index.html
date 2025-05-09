@@ -39,37 +39,50 @@
 
 
 
+    <!-- 引入 APlayer 的 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" />
 
-<!-- APlayer 样式和脚本 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    <!-- 引入 APlayer 的 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 
-<!-- 背景音乐播放器 -->
-<div id="aplayer"></div>
+    <!-- 背景音乐播放器 -->
+    <div id="aplayer"></div>
 
-<script>
+    <script>
 document.addEventListener('DOMContentLoaded', function () {
     const ap = new APlayer({
         container: document.getElementById('aplayer'),
         fixed: true,
-        autoplay: true, // 自动播放
-        loop: 'all',    // 循环播放
+        autoplay: true,
+        loop: 'all',
         order: 'list',
-        lrcType: 3,  // 支持滚动歌词
-        volume: 0.5,    // 默认音量
+        lrcType: 3,
+        volume: 0.5,
         audio: [
             {
                 name: '为什么',
                 artist: '五月天',
-                url: '/music/why.mp3', // 本地音乐
-                cover: '/images/handsome.jpg', // 封面图片
-                lrc: '/music/为什么（今日的爱情）-五月天-歌词.lrc' // 歌词文件
+                url: '/music/why.mp3',
+                cover: '/images/handsome.jpg',
+                lrc: '/music/为什么（今日的爱情）-五月天-歌词.lrc'
+            },
+            {
+                name: '随便说说',
+                artist: '陈绮贞',
+                url: '/music/随便说说.mp3',
+                cover: '/images/handsome.jpg',
+                lrc: '/music/随便说说-陈绮贞.lrc'
             }
         ]
     });
+
+    const path = window.location.pathname;
+    if (document.title.includes('你想说什么？')) {
+    ap.list.switch(1);
+    ap.play();
+}
 });
 </script>
-
 
 <meta name="generator" content="Hexo 7.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
@@ -166,9 +179,23 @@ document.addEventListener('DOMContentLoaded', function () {
 <div class="post-preview-container" style="min-height: 720px">
     
     <div class="post-preview">
+        <div class="post-time">2025-05-09</div>
+        <div class="post-info">
+            <a href="http://localhost:4000/2025/05/09/just-talking/just-talking/">
+                <h3>
+                    你想说什么？
+                </h3>
+            </a>
+            <p>
+                
+            </p>
+        </div>
+    </div>
+    
+    <div class="post-preview">
         <div class="post-time">2025-03-29</div>
         <div class="post-info">
-            <a href="https://fruitchan5.github.io/2025/03/29/heartbeat/">
+            <a href="http://localhost:4000/2025/03/29/heartbeat/">
                 <h3>
                     heartbeat
                 </h3>
@@ -188,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="post-preview">
         <div class="post-time">2025-03-26</div>
         <div class="post-info">
-            <a href="https://fruitchan5.github.io/2025/03/26/handbook/">
+            <a href="http://localhost:4000/2025/03/26/handbook/">
                 <h3>
                     handbook
                 </h3>
@@ -208,7 +235,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="post-preview">
         <div class="post-time">2025-03-21</div>
         <div class="post-info">
-            <a href="https://fruitchan5.github.io/2025/03/21/death-and-growth/">
+            <a href="http://localhost:4000/2025/03/21/death-and-growth/">
                 <h3>
                     death and growth
                 </h3>
@@ -231,7 +258,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="post-preview">
         <div class="post-time">2025-03-11</div>
         <div class="post-info">
-            <a href="https://fruitchan5.github.io/2025/03/11/death/">
+            <a href="http://localhost:4000/2025/03/11/death/">
                 <h3>
                     death?
                 </h3>
@@ -251,7 +278,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="post-preview">
         <div class="post-time">2025-03-01</div>
         <div class="post-info">
-            <a href="https://fruitchan5.github.io/2025/03/01/woe/">
+            <a href="http://localhost:4000/2025/03/01/woe/">
                 <h3>
                     不要否定我
                 </h3>
@@ -271,7 +298,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="post-preview">
         <div class="post-time">2025-02-27</div>
         <div class="post-info">
-            <a href="https://fruitchan5.github.io/2025/02/27/existentialist/">
+            <a href="http://localhost:4000/2025/02/27/existentialist/">
                 <h3>
                     存在主义
                 </h3>
@@ -291,7 +318,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="post-preview">
         <div class="post-time">2025-02-25</div>
         <div class="post-info">
-            <a href="https://fruitchan5.github.io/2025/02/25/shaiyichang/">
+            <a href="http://localhost:4000/2025/02/25/shaiyichang/">
                 <h3>
                     我的晒衣场
                 </h3>
@@ -311,7 +338,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="post-preview">
         <div class="post-time">2025-02-25</div>
         <div class="post-info">
-            <a href="https://fruitchan5.github.io/2025/02/25/hello-world/">
+            <a href="http://localhost:4000/2025/02/25/hello-world/">
                 <h3>
                     Hello World
                 </h3>

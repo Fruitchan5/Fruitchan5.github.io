@@ -39,37 +39,50 @@
 
 
 
+    <!-- 引入 APlayer 的 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" />
 
-<!-- APlayer 样式和脚本 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    <!-- 引入 APlayer 的 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 
-<!-- 背景音乐播放器 -->
-<div id="aplayer"></div>
+    <!-- 背景音乐播放器 -->
+    <div id="aplayer"></div>
 
-<script>
+    <script>
 document.addEventListener('DOMContentLoaded', function () {
     const ap = new APlayer({
         container: document.getElementById('aplayer'),
         fixed: true,
-        autoplay: true, // 自动播放
-        loop: 'all',    // 循环播放
+        autoplay: true,
+        loop: 'all',
         order: 'list',
-        lrcType: 3,  // 支持滚动歌词
-        volume: 0.5,    // 默认音量
+        lrcType: 3,
+        volume: 0.5,
         audio: [
             {
                 name: '为什么',
                 artist: '五月天',
-                url: '/music/why.mp3', // 本地音乐
-                cover: '/images/handsome.jpg', // 封面图片
-                lrc: '/music/为什么（今日的爱情）-五月天-歌词.lrc' // 歌词文件
+                url: '/music/why.mp3',
+                cover: '/images/handsome.jpg',
+                lrc: '/music/为什么（今日的爱情）-五月天-歌词.lrc'
+            },
+            {
+                name: '随便说说',
+                artist: '陈绮贞',
+                url: '/music/随便说说.mp3',
+                cover: '/images/handsome.jpg',
+                lrc: '/music/随便说说-陈绮贞.lrc'
             }
         ]
     });
+
+    const path = window.location.pathname;
+    if (document.title.includes('你想说什么？')) {
+    ap.list.switch(1);
+    ap.play();
+}
 });
 </script>
-
 
 <meta name="generator" content="Hexo 7.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
@@ -174,6 +187,21 @@ document.addEventListener('DOMContentLoaded', function () {
                     <span class="tag-text">2025</span>
                 </span>
     <ul>
+        
+        <!-- <li class="listing-item">
+        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li> -->
+        <li >
+            <span>05-09</span>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2025/05/09/just-talking/just-talking/">
+                        <span>
+                            你想说什么？
+                        </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </li>
         
         <!-- <li class="listing-item">
         <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
